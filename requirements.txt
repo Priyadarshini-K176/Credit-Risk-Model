@@ -1,7 +1,7 @@
-streamlit==1.28.2
-pandas==2.2.2           # works with numpy>=1.26
-numpy==1.26.4           # fully supports Python 3.13
-scikit-learn==1.4.2
-joblib==1.4.2
+streamlit==1.22.0
+pandas==2.0.2           # works with numpy>=1.26
+numpy==1.25.0           # fully supports Python 3.13
+scikit-learn==1.3.0
+joblib==1.3.2
 xgboost==2.0.3
 
