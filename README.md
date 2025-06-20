@@ -10,6 +10,60 @@ The Credit Risk Modeling App helps lenders, analysts, and fintech platforms make
 
 By analyzing behavioral signals like delinquency trends, credit usage habits, and loan-to-income pressure, it goes beyond traditional checks to detect hidden risk.
 
+
+---
+
+
+## 🏗️ App Architecture
+
+```text
+            ┌───────────────────────────────┐
+            │        🌐 Frontend UI         │
+            │         (Streamlit)           │
+            │                               │
+            │ - Takes user inputs           │
+            │ - Shows credit score & risk   │
+            │ - Displays default probability│
+            └─────────────▲─────────────────┘
+                          │
+                          │ calls
+                          ▼
+            ┌───────────────────────────────┐
+            │       🧠 Prediction Logic      │
+            │   (`prediction_helper.py`)    │
+            │                               │
+            │ - Prepares input dataframe    │
+            │ - Applies feature scaling     │
+            │ - Runs model prediction       │
+            │ - Converts to credit score    │
+            │ - Returns rating & probability│
+            └─────────────▲─────────────────┘
+                          │
+                          │ loads
+                          ▼
+            ┌───────────────────────────────┐
+            │     📦 Model Artifacts         │
+            │     (`model_data.joblib`)     │
+            │                               │
+            │ - Trained ML model            │
+            │ - Scaler                      │
+            │ - Feature list                │
+            └───────────────────────────────┘
+---
+
+📁 Folder Structure
+bash
+Copy
+Edit
+Credit-Risk-Model/
+│
+├── main.py                      # Streamlit UI app
+├── prediction_helper.py         # Input processing
+├── artifacts/
+│   └── model_data.joblib        # Trained model + scaler + feature list
+├── requirements.txt             # Dependencies for deployment
+└── README.md                    # Project documentation
+
 ---
 
 ## 🚀 Try the App
