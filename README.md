@@ -1,75 +1,47 @@
 # 💳 Credit Risk Modeling Web App
 
-The Credit Risk Modeling App helps lenders, analysts, and fintech platforms make smarter loan decisions by calculating:
-
-🔢 Default Probability
-
-🧮 Credit Score (300–900)
-
-🟢 Risk Rating (Poor, Average, Good, Excellent)
-
-By analyzing behavioral signals like delinquency trends, credit usage habits, and loan-to-income pressure, it goes beyond traditional checks to detect hidden risk.
-
+This Streamlit-based app predicts an applicant's **default probability**, generates a **credit score (300–900)**, and assigns a **risk rating** (Poor to Excellent) based on various financial and behavioral factors.
 
 ---
 
+## 🚀 Try the App
 
-## 🏗️ App Architecture
+🔗 [Launch Credit Risk App](https://credit-risk-model-app.streamlit.app/)
 
-```text
-            ┌───────────────────────────────┐
-            │        🌐 Frontend UI         │
-            │         (Streamlit)           │
-            │                               │
-            │ - Takes user inputs           │
-            │ - Shows credit score & risk   │
-            │ - Displays default probability│
-            └─────────────▲─────────────────┘
-                          │
-                          │ calls
-                          ▼
-            ┌───────────────────────────────┐
-            │       🧠 Prediction Logic      │
-            │   (`prediction_helper.py`)    │
-            │                               │
-            │ - Prepares input dataframe    │
-            │ - Applies feature scaling     │
-            │ - Runs model prediction       │
-            │ - Converts to credit score    │
-            │ - Returns rating & probability│
-            └─────────────▲─────────────────┘
-                          │
-                          │ loads
-                          ▼
-            ┌───────────────────────────────┐
-            │     📦 Model Artifacts         │
-            │     (`model_data.joblib`)     │
-            │                               │
-            │ - Trained ML model            │
-            │ - Scaler                      │
-            │ - Feature list                │
-            └───────────────────────────────┘
 ---
 
-🚀 Try the App
+## 🧠 Model Inputs (Features Used)
 
-🔗 [Launch Credit Risk App]--> https://credit-risk-model-app.streamlit.app/
+The model uses the following **13 features**:
+
+| Feature Name                   | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `age`                         | Age of the applicant                                                       |
+| `loan_tenure_months`          | Loan repayment period in months                                            |
+| `number_of_open_accounts`     | Number of currently active loan accounts                                   |
+| `credit_utilization_ratio`    | % of credit limit currently being used                                     |
+| `loan_to_income`              | Ratio of loan amount to annual income (`loan_amount / income`)            |
+| `delinquency_ratio`           | % of months with late payments over the loan tenure                       |
+| `average_dpd_per_delinquency` | Average number of days payment was delayed when delinquent                |
+| `residence_type_Owned`        | One-hot encoded: 1 if residence is owned, else 0                          |
+| `residence_type_Rented`       | One-hot encoded: 1 if rented, else 0                                      |
+| `loan_purpose_Education`      | One-hot encoded: 1 if loan is for education                               |
+| `loan_purpose_Home`           | One-hot encoded: 1 if loan is for home purchase                           |
+| `loan_purpose_Personal`       | One-hot encoded: 1 if loan is for personal use                            |
+| `loan_type_Unsecured`         | One-hot encoded: 1 if loan is unsecured                                   |
+
+> 🧩 The categorical features are converted into one-hot encoded values.
+
 ---
 
-🧮 How It Works
-User fills out the form
+## 🧮 How It Works
 
-Data is preprocessed and scaled
-
-The model returns:
-
-✅ Default Probability
-
-📊 Credit Score (300–900)
-
-🟢 Risk Rating: Poor, Average, Good, Excellent
-
-
+1. **User fills out the form**
+2. Data is **preprocessed and scaled**
+3. The model returns:
+   - ✅ **Default Probability**
+   - 📊 **Credit Score** (300–900)
+   - 🟢 **Risk Rating**: Poor, Average, Good, Excellent
 
 ---
 
