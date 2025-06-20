@@ -51,18 +51,25 @@ By analyzing behavioral signals like delinquency trends, credit usage habits, an
             └───────────────────────────────┘
 ---
 
-## 🚀 Try the App
+🚀 Try the App
 
 🔗 [Launch Credit Risk App]--> https://credit-risk-model-app.streamlit.app/
+---
 
-## 🧮 How It Works
+🧮 How It Works
+User fills out the form
 
-1. **User fills out the form**
-2. Data is **preprocessed and scaled**
-3. The model returns:
-   - ✅ **Default Probability**
-   - 📊 **Credit Score** (300–900)
-   - 🟢 **Risk Rating**: Poor, Average, Good, Excellent
+Data is preprocessed and scaled
+
+The model returns:
+
+✅ Default Probability
+
+📊 Credit Score (300–900)
+
+🟢 Risk Rating: Poor, Average, Good, Excellent
+
+
 
 ---
 
