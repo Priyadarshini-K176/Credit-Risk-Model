@@ -51,21 +51,6 @@ By analyzing behavioral signals like delinquency trends, credit usage habits, an
             └───────────────────────────────┘
 ---
 
-📁 Folder Structure
-bash
-Copy
-Edit
-Credit-Risk-Model/
-│
-├── main.py                      # Streamlit UI app
-├── prediction_helper.py         # Input processing
-├── artifacts/
-│   └── model_data.joblib        # Trained model + scaler + feature list
-├── requirements.txt             # Dependencies for deployment
-└── README.md                    # Project documentation
-
----
-
 ## 🚀 Try the App
 
 🔗 [Launch Credit Risk App]--> https://credit-risk-model-app.streamlit.app/
