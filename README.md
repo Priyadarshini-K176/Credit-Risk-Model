@@ -1,6 +1,14 @@
 # 💳 Credit Risk Modeling Web App
 
-This Streamlit-based app predicts an applicant's **default probability**, generates a **credit score (300–900)**, and assigns a **risk rating** (Poor to Excellent) based on various financial and behavioral factors.
+The Credit Risk Modeling App helps lenders, analysts, and fintech platforms make smarter loan decisions by calculating:
+
+🔢 Default Probability
+
+🧮 Credit Score (300–900)
+
+🟢 Risk Rating (Poor, Average, Good, Excellent)
+
+By analyzing behavioral signals like delinquency trends, credit usage habits, and loan-to-income pressure, it goes beyond traditional checks to detect hidden risk.
 
 ---
 
